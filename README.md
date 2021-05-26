@@ -36,6 +36,6 @@ This app was created for booking cinema seats.
 
 The `first page` asks the user for the number of places and if they should be next to each other.
 
-On the `other side` there is an outline of the audience where you can choose the place you are interested in.
+On the `second page` there is an outline of the audience where you can choose the place you are interested in.
 
 The `third page` is the booking confirmation showing where the reserved seat is.
