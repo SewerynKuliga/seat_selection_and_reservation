@@ -4,9 +4,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-## `npm install`
+### `npm install`
 
 It installs all the necessary files to start the application.
+
+
+### `npm run api`
+
+Launches the API server necessary for the application to function.
 
 ### `npm start`
 
