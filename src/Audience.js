@@ -2,28 +2,20 @@ import React from 'react'
 import styled from 'styled-components'
 import { withRouter } from "react-router-dom";
 
-
-
-
 const Seat = styled.div`
     display: inline-block;
+    position: relative;
     margin: 5px;
     border: 1px solid;
-    padding: 40px;
+    width: 70px;
+    height: 70px;
     background-color: ${props => props.reserved ? 'rgb(29, 21, 7)' : 'auto'};
-
     `
 
-
-
-
 class Audience extends React.Component {
-
     state = {
         clicked: false
     }
-
-
 
     handleClick = () => {
         this.props.history.push('/confirm')
@@ -36,14 +28,14 @@ class Audience extends React.Component {
     render() {
         return (
             <span onClick={this.yourChoice}>
-                <Seat reserved={this.props.reserved} onClick={this.yourChoice} className={this.state.clicked ? "picked" : "auto"}>
-
+                <Seat
+                    reserved={this.props.reserved}
+                    onClick={this.yourChoice}
+                    className={this.state.clicked ? "picked" : "auto"}>
                 </Seat>
-
             </span>
         )
     }
-
 }
 
 export default withRouter(Audience);

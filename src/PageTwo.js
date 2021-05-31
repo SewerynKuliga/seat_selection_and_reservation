@@ -1,45 +1,27 @@
-import React, { Children } from 'react';
+import React from 'react';
 import Audience from './Audience'
 import styled from 'styled-components'
 import Legend from './Legend';
+import CorridorsAndEntrance from './CorridorsAndEntrance';
 
 const Container = styled.div`
-  dislay: inline-block;
   position: relative;
-  margin: 5% 10% 0% 10%;
-  width: 1390px;
-  height: 870px;
+  margin: 5% auto;
+  margin-bottom: 1%;
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 85%;
+  height: 900px;
   border: 1px solid;
+  min-width: 1230px;
+  max-width: 1260px;
 `
-  
+
 function parseResponse(result) {
-  // const template = {
-  //   "id": "",
-  //   "cords": {
-  //     "x": null,
-  //     "y": null
-  //   },
-  //   "reserved": null
-  // }
-
-  // const array = new Array(105)
-
-  // for (var x = 1; x <= 7; x++) {
-
-  //   for (var y = 1; y <= 15; y++) {
-
-
-  //   }
-
-  // }
-
-  // console.log(array)
-
   return result
 }
 
 class PageTwo extends React.Component {
-
   static defaultProps = {
     seats: []
   }
@@ -47,8 +29,6 @@ class PageTwo extends React.Component {
   state = {
     seats: this.props.seats
   }
-
-
 
   componentDidMount = () => {
     this.setState({ ...this.state, isFetching: true });
@@ -63,12 +43,11 @@ class PageTwo extends React.Component {
       });
   };
 
-
-
   render() {
     return (
       <div>
         <Container>
+          <CorridorsAndEntrance />
           {this.state.seats.map(seat => <Audience
             id={seat.id}
             key={seat.id}

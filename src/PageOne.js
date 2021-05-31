@@ -3,13 +3,11 @@ import './App.css';
 import styled from 'styled-components';
 import { withRouter } from "react-router-dom";
 
-
-
 const Container = styled.div`
-  position: absolute;
+  position: relative;
   width: 280px;
   height: 225px;
-  margin: 10% 40%;
+  margin: 10% auto;
 `
 
 const ChooseSeats = styled.div`
@@ -24,6 +22,7 @@ const ChooseSeats = styled.div`
 const Text = styled.p`
   display: inline-block;
 `
+
 const Input = styled.input`
   display: inline-block;
   height: 20px;
@@ -31,6 +30,7 @@ const Input = styled.input`
   float: right;
   margin-top: 15px;
 `
+
 const SeatsTogether = styled.label`
   display: block;
   margin: 20px auto;
@@ -38,7 +38,6 @@ const SeatsTogether = styled.label`
 `
 
 class PageOne extends React.Component {
-
   handleClick = () => {
     this.props.history.push('/seats')
   }

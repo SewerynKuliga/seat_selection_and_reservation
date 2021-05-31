@@ -11,11 +11,13 @@ const Button = styled.button`
 `
 
 const LegendBox = styled.div`
-  width: 1350px;
+  width: 85%px;
   height: 70px;
   border: 1px solid;
-  margin: 0% 10% 0% 10%;
+  margin: 0% auto;
   padding: 20px;
+  min-width: 1290px;
+  max-width: 1360px;
 `
 
 const ReservedFalse = styled.div`
