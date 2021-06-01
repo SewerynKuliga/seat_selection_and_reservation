@@ -27,7 +27,8 @@ class PageTwo extends React.Component {
   }
 
   state = {
-    seats: this.props.seats
+    seats: this.props.seats,
+    options: this.props.options
   }
 
   componentDidMount = () => {
@@ -42,6 +43,10 @@ class PageTwo extends React.Component {
         this.setState({ ...this.state, isFetching: false });
       });
   };
+
+  componentDidUpdate = () => {
+    console.log("Component update!")
+  }
 
   render() {
     return (
