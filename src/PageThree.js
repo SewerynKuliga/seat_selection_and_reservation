@@ -17,6 +17,9 @@ class PageThree extends React.Component {
                     <br />- rząd x1, miejsce y1 (id1)
                     <br />- rząd x2, miejsce y2 (id2)
                     <br />- rząd x3, miejsce y3 (id3)
+                    <br /><br />
+
+                    (widok poglądowy)
 
 
                     {/* WIDOK PODGLĄDOWY */}

@@ -49,7 +49,7 @@ class CorridorsAndEntrance extends React.Component {
     render() {
         return (
             <span>
-                <Entrance><Names>Entrance</Names></Entrance>
+                <Entrance><Names>Wejście</Names></Entrance>
                 {/*<Corridor1></Corridor1>
                 <Corridor2><p>Corridor2</p></Corridor2>
                 <Corridor3><p>Corridor3</p></Corridor3> */}

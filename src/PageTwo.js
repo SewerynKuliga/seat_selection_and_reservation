@@ -16,6 +16,10 @@ const Container = styled.div`
   min-width: 1230px;
   max-width: 1260px;
 `
+const Inputt = styled.input`
+  height: 20px;
+  display: none;
+`
 
 function parseResponse(result) {
   return result
@@ -44,13 +48,10 @@ class PageTwo extends React.Component {
       });
   };
 
-  componentDidUpdate = () => {
-    console.log("Component update!")
-  }
-
   render() {
     return (
       <div>
+        <Inputt value={this.state.clicked}></Inputt>
         <Container>
           <CorridorsAndEntrance />
           {this.state.seats.map(seat => <Audience
@@ -60,6 +61,7 @@ class PageTwo extends React.Component {
           />)}
         </Container>
         <Legend />
+
       </div>
     )
   }
