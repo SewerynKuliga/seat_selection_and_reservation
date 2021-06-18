@@ -18,53 +18,40 @@ const Container = styled.div`
 `
 const Inputt = styled.input`
   height: 20px;
-  display: none;
+  display: ;
 `
 
-function parseResponse(result) {
-  return result
-}
+// function parseResponse(result) {
+//   return result
+// }
 
-class PageTwo extends React.Component {
-  static defaultProps = {
-    seats: []
-  }
+function PageTwo() {
+  // const [seats, setSeats] = useState()
 
-  state = {
-    seats: this.props.seats,
-    options: this.props.options
-  }
+  // fetch('http://localhost:3001/seats')
+  //   .then(response => response.json())
+  //   .then(console.log(response))
+  //   .catch();
 
-  componentDidMount = () => {
-    this.setState({ ...this.state, isFetching: true });
-    fetch('http://localhost:3001/seats')
-      .then(response => response.json())
-      .then(result => {
-        this.setState({ seats: parseResponse(result), isFetching: false })
-      })
-      .catch(e => {
-        console.log(e);
-        this.setState({ ...this.state, isFetching: false });
-      });
-  };
+  return (
+    <div>
+      <Inputt
+      // value={this.props.options} 
+      >
+        {/* {this.props.options} */}
+      </Inputt>
+      <Container>
+        <CorridorsAndEntrance />
+        {/* {seats.map(seat => <Audience
+          id={seat.id}
+          key={seat.id}
+          reserved={seat.reserved} 
+        />)}*/}
+      </Container>
+      <Legend />
 
-  render() {
-    return (
-      <div>
-        <Inputt value={this.state.clicked}></Inputt>
-        <Container>
-          <CorridorsAndEntrance />
-          {this.state.seats.map(seat => <Audience
-            id={seat.id}
-            key={seat.id}
-            reserved={seat.reserved}
-          />)}
-        </Container>
-        <Legend />
-
-      </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default PageTwo;

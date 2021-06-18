@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { withRouter } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const Button = styled.button`
   display: inline-block;
@@ -52,24 +52,21 @@ const Text = styled.p`
     margin-right: 40px;
 `
 
+function Legend() {
+    let history = useHistory();
 
-
-class Legend extends Component {
-
-    handleClick = () => {
-        this.props.history.push('/confirm')
+    function handleClick() {
+        history.push("/confirm");
     }
 
-    render() {
-        return (
-            <LegendBox>
-                <ReservedFalse></ReservedFalse> <Text>Miejsca dostępne</Text>
-                <ReservedTrue></ReservedTrue> <Text>Miejsca zarezerwowane</Text>
-                <YourChoice></YourChoice> <Text>Twój wybór</Text>
-                <Button onClick={this.handleClick}>Rezerwuj</Button>
-            </LegendBox>
-        )
-    }
+    return (
+        <LegendBox>
+            <ReservedFalse></ReservedFalse> <Text>Miejsca dostępne</Text>
+            <ReservedTrue></ReservedTrue> <Text>Miejsca zarezerwowane</Text>
+            <YourChoice></YourChoice> <Text>Twój wybór</Text>
+            <Button onClick={handleClick}>Rezerwuj</Button>
+        </LegendBox>
+    )
 }
 
-export default withRouter(Legend);
+export default Legend;

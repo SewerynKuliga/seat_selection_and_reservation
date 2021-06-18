@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import styled from 'styled-components';
-import { withRouter } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import { useState } from 'react';
 
 const Container = styled.div`
   position: relative;
@@ -10,15 +11,6 @@ const Container = styled.div`
   margin: 10% auto;
 `
 
-const ChooseSeats = styled.div`
-  position: relative;
-  width: 280px;
-  height: 50px;
-  border: 1px solid;
-  margin-top: 50px;
-  text-align: center;
-  padding-top: 25px;
-`
 const Text = styled.p`
   display: inline-block;
 `
@@ -36,46 +28,52 @@ const SeatsTogether = styled.label`
   margin: 20px auto;
   text-align: center;
 `
+const ChooseSeats = styled.div`
+  position: relative;
+  width: 280px;
+  height: 50px;
+  border: 1px solid;
+  margin-top: 50px;
+  text-align: center;
+  padding-top: 25px;
+`
 
-class PageOne extends React.Component {
-  state = {
-    options: 1
+function PageOne() {
+  const [options, setOptions] = useState(1)
+  let history = useHistory()
+
+  function handleClick() {
+    history.push('/seats')
   }
 
-  handleClick = () => {
-    this.props.history.push('/seats')
+  function updateOptions(event) {
+    // setOptions({ parseInt(event.target.value)})
   }
 
-  updateOptions = (event) => {
-    this.setState({ options: parseInt(event.target.value) })
+  const optionsChoice = [
+    { value: 1, label: 1 },
+    { value: 2, label: 2 },
+    { value: 3, label: 3 },
+    { value: 4, label: 4 },
+    { value: 5, label: 5 }
+  ]
 
-  }
+  return (
+    <Container>
+      <Text>Liczba miejsc:</Text>
+      <SelectPlace value={parseInt(options)}>
+        {optionsChoice.map((option) => (
+          <option value={option.value} key={option.label}>{option.label}</option>
+        ))}
+      </SelectPlace> <br />
+      <SeatsTogether>
+        <input type="checkbox" /> Czy miejsca mają być obok siebie?
+      </SeatsTogether>
+      <ChooseSeats onClick={handleClick}>Wybierz miejsca</ChooseSeats>
+    </Container>
+  );
 
-  render() {
-    const options = [
-      { value: 1, label: 1 },
-      { value: 2, label: 2 },
-      { value: 3, label: 3 },
-      { value: 4, label: 4 },
-      { value: 5, label: 5 }
-    ]
-
-    return (
-      <Container>
-        <Text>Liczba miejsc:</Text>
-        <SelectPlace options={options} onChange={this.updateOptions} value={parseInt(this.state.options)}>
-          {options.map((option) => (
-            <option value={option.value} key={option.label}>{option.label}</option>
-          ))}
-        </SelectPlace> <br />
-        <SeatsTogether>
-          <input type="checkbox" /> Czy miejsca mają być obok siebie?
-                </SeatsTogether>
-        <ChooseSeats onClick={this.handleClick}>Wybierz miejsca</ChooseSeats>
-      </Container>
-    );
-  }
 }
 
-export default withRouter(PageOne);
+export default PageOne;
 

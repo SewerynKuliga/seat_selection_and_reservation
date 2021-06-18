@@ -7,7 +7,7 @@ const Entrance = styled.span`
     height: 241px;
     width: 152px;
     border: 1px solid;
-    margin 5px;
+    margin: 5px;
     float: left;
 `
 
