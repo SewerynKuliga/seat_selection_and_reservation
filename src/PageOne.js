@@ -46,8 +46,8 @@ function PageOne() {
     history.push('/seats')
   }
 
-  function updateOptions(event) {
-    // setOptions({ parseInt(event.target.value)})
+  function updateOptions(e) {
+     setOptions(e.target.value)
   }
 
   const optionsChoice = [
@@ -61,7 +61,7 @@ function PageOne() {
   return (
     <Container>
       <Text>Liczba miejsc:</Text>
-      <SelectPlace value={parseInt(options)}>
+      <SelectPlace onChange={updateOptions} value={parseInt(options)}>
         {optionsChoice.map((option) => (
           <option value={option.value} key={option.label}>{option.label}</option>
         ))}
