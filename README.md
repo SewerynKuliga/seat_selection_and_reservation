@@ -2,6 +2,7 @@ Application in production...
 
 
 This project was created with the [Create React App](https://github.com/facebook/create-react-app), application using the [Redux](https://redux.js.org/) template.
+The application built on `functions` and using `hooks`.
 
 ## Necessary Scripts
 
