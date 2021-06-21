@@ -1,5 +1,5 @@
 import React from 'react';
-import Audience from './Audience'
+// import Audience from './Audience'
 import styled from 'styled-components'
 import Legend from './Legend';
 import CorridorsAndEntrance from './CorridorsAndEntrance';
