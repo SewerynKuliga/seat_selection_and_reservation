@@ -33,6 +33,11 @@ const ChooseSeats = styled.div`
 function PageOne() {
   const [options, setOptions] = useState(1)
   let history = useHistory()
+  const [checked, setChecked] = React.useState(false);
+
+  const handleChange = (event) => {
+    setChecked(event.target.checked);
+  };
 
   function handleClick() {
     history.push('/seats')
@@ -43,7 +48,12 @@ function PageOne() {
       <Text>Liczba miejsc:</Text>
       <SeatsNumber options={options} setOptions={setOptions} /> <br />
       <SeatsTogether>
-        <input type="checkbox" /> Czy miejsca mają być obok siebie?
+        <Checkbox
+          checked={checked}
+          color="primary"
+          onChange={handleChange}
+          inputProps={{ 'aria-label': 'secondary checkbox' }}
+        /> Czy miejsca mają być obok siebie?
       </SeatsTogether>
       <ChooseSeats onClick={handleClick}>Wybierz miejsca</ChooseSeats>
     </Container>
