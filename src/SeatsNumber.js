@@ -9,9 +9,7 @@ const SeatsNumbers = styled.select`
   float: right;
   margin-top: 15px;
 `
-
-
-function SeatsNumber({options, setOptions}) {
+function SeatsNumber({ options, setOptions }) {
 
   const optionsChoice = [
     { value: 1, label: 1 },
@@ -19,20 +17,19 @@ function SeatsNumber({options, setOptions}) {
     { value: 3, label: 3 },
     { value: 4, label: 4 },
     { value: 5, label: 5 }
-    ]
-    
+  ]
+
   function updateOptions(e) {
     setOptions(parseInt(e.target.value))
   }
-  
-    return (
-        <SeatsNumbers onChange={updateOptions} value={parseInt(options)}>
-        {optionsChoice.map((option) => (
-          <option value={option.value} key={option.label}>{option.label}</option>
-        ))}
-      </SeatsNumbers>
-    );
-  
-  }
-  
-  export default SeatsNumber;
+
+  return (
+    <SeatsNumbers onChange={updateOptions} value={parseInt(options)}>
+      {optionsChoice.map((option) => (
+        <option value={option.value} key={option.label}>{option.label}</option>
+      ))}
+    </SeatsNumbers>
+  );
+}
+
+export default SeatsNumber;

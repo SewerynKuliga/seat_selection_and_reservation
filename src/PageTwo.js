@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from "react";
 // import Audience from './Audience'
 import styled from 'styled-components'
 import Legend from './Legend';
@@ -26,12 +27,17 @@ const Inputt = styled.input`
 // }
 
 function PageTwo() {
-  // const [seats, setSeats] = useState()
 
-  // fetch('http://localhost:3001/seats')
-  //   .then(response => response.json())
-  //   .then(console.log(response))
-  //   .catch();
+
+  const fetchData = () => {
+    return fetch('http://localhost:3001/seats')
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <div>

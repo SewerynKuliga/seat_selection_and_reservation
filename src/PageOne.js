@@ -31,16 +31,16 @@ const ChooseSeats = styled.div`
 `
 
 function PageOne() {
-  const [options, setOptions] = useState(1)
-  let history = useHistory()
+  const [options, setOptions] = useState(1);
   const [checked, setChecked] = React.useState(false);
+  let history = useHistory();
 
   const handleChange = (event) => {
     setChecked(event.target.checked);
   };
 
   function handleClick() {
-    history.push('/seats')
+    history.push('/seats');
   }
 
   return (
