@@ -1,38 +1,34 @@
-// import React from 'react'
-// import styled from 'styled-components'
-// import { withRouter } from "react-router-dom";
+import React from 'react'
+import styled from 'styled-components'
+import { useState } from "react";
 
-// const Seat = styled.span`
-//     display: inline-block;
-//     position: relative;
-//     margin: 5px;
-//     border: 1px solid;
-//     width: 70px;
-//     height: 70px;
-//     background-color: ${props => props.reserved ? 'rgb(29, 21, 7)' : 'auto'};
-//     `
+const Seat = styled.span`
+    display: inline-block;
+    position: relative;
+    margin: 5px;
+    border: 1px solid;
+    width: 70px;
+    height: 70px;
+    // background-color: ${props => props.reserved ? 'rgb(29, 21, 7)' : 'auto'};
+    `
 
-// function Audience(reserved) {
-//     const [clicked, setClicked] = useState('false');
+function Audience(reserved) {
+     const [clicked, setClicked] = useState('false')
 
-//     handleClick = () => {
-//         history.push('/confirm')
-//     }
+    function yourChoice() {
+        setClicked({ clicked: clicked })
+    }
 
-//     yourChoice = () => {
-//         setClicked({ clicked: clicked })
-//     }
+    return (
+        <span onClick={yourChoice}>
+            <Seat
+                reserved={reserved}
+                onClick={yourChoice}
+                className={clicked ? "picked" : "auto"}>
+            </Seat>
+        </span>
+    )
 
-//     return (
-//         <span onClick={yourChoice}>
-//             <Seat
-//                 reserved={reserved}
-//                 onClick={yourChoice}
-//                 className={clicked ? "picked" : "auto"}>
-//             </Seat>
-//         </span>
-//     )
+}
 
-// }
-
-// export default withRouter(Audience);
+export default Audience;

@@ -1,9 +1,9 @@
 import React from 'react';
 import { useEffect, useState } from "react";
-// import Audience from './Audience'
+import Audience from './Audience'
 import styled from 'styled-components'
 import Legend from './Legend';
-import CorridorsAndEntrance from './CorridorsAndEntrance';
+// import CorridorsAndEntrance from './CorridorsAndEntrance';
 
 const Container = styled.div`
   position: relative;
@@ -29,23 +29,23 @@ const Inputt = styled.input`
 
 
 
-
 function PageTwo() {
-  const [seats, setSeats] = useState()
+  const [seatss, setSeatss] = useState([])
 
   useEffect(() => {
     const fetchSeats = () => {
       return fetch('http://localhost:3001/seats')
         .then((response) => response.json())
         .then((data) => console.log(data))
-      // .then(setSeats({seats: []}))
+        .then((result) => {
+          setSeatss({ seats: result })
+        })
     };
     fetchSeats();
+    setSeatss(fetch.data)
   }, []);
 
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
+
 
   return (
     <div>
@@ -55,12 +55,13 @@ function PageTwo() {
         {/* {this.props.options} */}
       </Inputt>
       <Container>
-        <CorridorsAndEntrance />
-        {/* {seats.map(seat => <Audience
+        asdas
+        {/* <CorridorsAndEntrance /> */}
+        {/* {seatss.seats.map(seat => <Audience
           id={seat.id}
           key={seat.id}
-          reserved={seat.reserved} 
-        />)}*/}
+          reserved={seat.reserved}
+        />)}  */}
       </Container>
       <Legend />
 
