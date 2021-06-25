@@ -56,11 +56,11 @@ function PageTwo() {
       <Container>
 
         {/* <CorridorsAndEntrance /> */}
-        {/* {data.map(seats => <Audience
+        {data.map(seats => <Audience
           id={seats.id}
           key={seats.id}
           reserved={seats.reserved}
-        />)} */}
+        />)}
       </Container>
       <Legend />
 
