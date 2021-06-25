@@ -19,7 +19,7 @@ const Container = styled.div`
 `
 const Inputt = styled.input`
   height: 20px;
-  display: ;
+  display:;
 `
 
 // function parseResponse(result) {
@@ -30,22 +30,21 @@ const Inputt = styled.input`
 
 
 function PageTwo() {
-  const [seatss, setSeatss] = useState([])
+  const [data, setData] = useState({});
+
+  const fetchSeats = () => {
+    return fetch('http://localhost:3001/seats')
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setData(data)
+      })
+
+  }
 
   useEffect(() => {
-    const fetchSeats = () => {
-      return fetch('http://localhost:3001/seats')
-        .then((response) => response.json())
-        .then((data) => console.log(data))
-        .then((result) => {
-          setSeatss({ seats: result })
-        })
-    };
-    fetchSeats();
-    setSeatss(fetch.data)
-  }, []);
-
-
+    fetchSeats()
+  }, [])
 
   return (
     <div>
@@ -55,13 +54,13 @@ function PageTwo() {
         {/* {this.props.options} */}
       </Inputt>
       <Container>
-        asdas
+
         {/* <CorridorsAndEntrance /> */}
-        {/* {seatss.seats.map(seat => <Audience
-          id={seat.id}
-          key={seat.id}
-          reserved={seat.reserved}
-        />)}  */}
+        {/* {data.map(seats => <Audience
+          id={seats.id}
+          key={seats.id}
+          reserved={seats.reserved}
+        />)} */}
       </Container>
       <Legend />
 
