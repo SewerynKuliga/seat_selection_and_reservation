@@ -13,10 +13,10 @@ const Seat = styled.span`
     `
 
 function Audience(reserved) {
-     const [clicked, setClicked] = useState('false')
+    const [clicked, setClicked] = useState(false)
 
     function yourChoice() {
-        setClicked({ clicked: clicked })
+        setClicked(!clicked)
     }
 
     return (
@@ -24,11 +24,11 @@ function Audience(reserved) {
             <Seat
                 reserved={reserved}
                 onClick={yourChoice}
-                className={clicked ? "picked" : "auto"}>
+                className={clicked ? "picked" : "auto"}
+            >
             </Seat>
         </span>
     )
-
 }
 
 export default Audience;
