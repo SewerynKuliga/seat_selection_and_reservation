@@ -55,7 +55,8 @@ function PageTwo() {
           id={seats.id}
           key={seats.id}
           reserved={seats.reserved}
-        />)}
+        />
+        )}
       </Container>
       <Legend />
     </div>
