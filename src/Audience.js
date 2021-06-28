@@ -12,21 +12,21 @@ const Seat = styled.span`
     background-color: ${props => props.reserved ? 'rgb(29, 21, 7)' : 'auto'};
     `
 
-
 function Audience({ reserved }) {
     const [clicked, setClicked] = useState(false);
+
 
     function yourChoice() {
         setClicked(!clicked)
     }
 
     return (
-            <Seat
-                reserved={reserved}
-                onClick={yourChoice}
-                className={clicked ? "picked" : "auto"}
-            >
-            </Seat>
+        <Seat
+            reserved={reserved}
+            onClick={yourChoice}
+            className={clicked ? "picked" : "auto"}
+        >
+        </Seat>
     )
 }
 
