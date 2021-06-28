@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import Audience from './Audience'
 import styled from 'styled-components'
 import Legend from './Legend';
-// import CorridorsAndEntrance from './CorridorsAndEntrance';
 
 const Container = styled.div`
   position: relative;
@@ -16,7 +15,45 @@ const Container = styled.div`
   border: 1px solid;
   min-width: 1230px;
   max-width: 1260px;
+  display: grid;
+  grid-template-areas:
+    'seat seat seat seat seat seat seat seat seat seat seat seat seat seat seat'
+    'seat seat seat seat seat seat seat seat seat seat seat seat seat seat seat'
+    'seat seat seat seat seat seat seat seat seat seat seat seat seat seat seat'
+    'seat seat seat seat seat seat seat seat seat seat seat seat seat seat seat'
+    'seat seat seat seat seat seat seat seat seat seat seat seat seat seat seat'
+    'seat seat seat seat seat seat seat seat seat seat seat seat seat seat seat'
+    'seat seat seat seat seat seat seat seat seat seat seat seat seat seat seat'
+    'seat seat seat seat seat seat seat seat seat seat seat seat seat seat seat'
+    'seat seat seat seat seat seat seat seat seat seat seat seat seat seat seat'
+    'seat seat seat seat seat seat seat seat seat seat seat seat seat seat seat';
+
 `
+
+const SSSS = styled.span`
+    display: inline-block;
+
+    background-color: red;
+
+    position: relative;
+    margin: 5px;
+    border: 1px solid;
+    width: 70px;
+    height: 70px;
+ `
+
+// const SSSSS = styled.div`
+//     display: inline-block;
+
+//     background-color: red;
+
+//     position: relative;
+//     margin: 5px;
+//     border: 1px solid;
+//     width: 70px;
+//     height: 70px;
+//     grid-area: oper;
+// `
 // const Inputt = styled.input`
 //   height: 20px;
 //   display:;
@@ -50,13 +87,15 @@ function PageTwo() {
       {/* {this.props.options} */}
       {/* </Inputt> */}
       <Container>
-        {/* <CorridorsAndEntrance /> */}
+        <SSSS></SSSS>
         {seats && seats.map(seats => <Audience
           id={seats.id}
           key={seats.id}
           reserved={seats.reserved}
         />
         )}
+
+        {/* <SSSSS></SSSSS> */}
       </Container>
       <Legend />
     </div>
