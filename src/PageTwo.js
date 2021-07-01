@@ -20,14 +20,15 @@ const Container = styled.div`
     "entrance entrance seat52 seat5 seat4 corridor seat32    seat      seat      seat      corridor2 seat91    seat01    seat01    seat01"
     "entrance entrance seat52 seat5 seat4 corridor seat32    seat      seat      seat      corridor2 seat91    seat01    seat01    seat01"
     "entrance entrance seat52 seat5 seat4 corridor seat32    seat      seat      seat      corridor2 seat91    seat01    seat01    seat01"
-    "seat1    seat1    seat1  seat5 seat4 corridor seat32    seat      seat      seat      corridor2 seat91     seat01    seat01    seat01"
-    "seat1    seat1    seat1  seat5 seat4 corridor seat32    seat      seat      seat      corridor2 seat91     seat01    seat01    seat01"
+    "seat1    seat1    seat1  seat5 seat4 corridor seat32    seat      seat      seat      corridor2 seat91    seat01    seat01    seat01"
+    "seat1    seat1    seat1  seat5 seat4 corridor seat32    seat      seat      seat      corridor2 seat91    seat01    seat01    seat01"
     "seat1    seat1    seat1  seat5 seat4 corridor corridor3 corridor3 corridor3 corridor3 corridor2 corridor4 corridor4 corridor4 corridor4"
     "seat1    seat1    seat1  seat5 seat4 corridor seat33    seat33    seat33    seat33    corridor2 seat9     seat02    seat02    seat02"
     "seat1    seat1    seat1  seat5 seat4 corridor seat33    seat33    seat33    seat33    corridor2 seat9     seat02    seat02    seat02"
     "seat1    seat1    seat1  seat5 seat4 corridor seat33    seat33    seat33    seat33    corridor2 seat9     seat02    seat02    seat02"
     "seat1    seat1    seat1  seat5 seat4 corridor seat33    seat33    seat33    seat33    corridor2 seat9     seat02    seat02    seat02";
     grid-auto-columns: 1fr;
+    // To na górze to tymczasowe rozwiązanie + uczę się wykorzystywać obszary tabel. Także za czystość kodu tego nie oceniać :D
 `
 // To na górze to tymczasowe rozwiązanie + uczę się wykorzystywać obszary tabel. Także za czystość kodu tego nie oceniać :D
 
@@ -47,7 +48,6 @@ const Corridor1 = styled.div`
   grid-area: corridor;
 `
 const Corridor2 = styled.div`
-
   grid-area: corridor2;
 `
 const Corridor3 = styled.div`

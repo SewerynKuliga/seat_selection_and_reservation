@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
 
-
 const Message = styled.div`
     margin: 10% 10% 10% 20%;
 `
@@ -17,8 +16,6 @@ function PageThree() {
                 <br />- rząd x2, miejsce y2 (id2)
                 <br />- rząd x3, miejsce y3 (id3)
                 <br /><br />
-
-                (widok poglądowy)
 
 
                 {/* WIDOK PODGLĄDOWY */}
