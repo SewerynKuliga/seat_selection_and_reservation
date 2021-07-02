@@ -56,16 +56,6 @@ const Corridor3 = styled.div`
 const Corridor4 = styled.div`
   grid-area: corridor4;
 `
-// const Corridor5 = styled.div`
-//   display: inline-block;
-//   background-color: red;
-//   position: relative;
-//   margin: 5px;
-//   border: 1px solid;
-//   width: 70px;
-//   height: 70px;
-//   
-// `
 
 function PageTwo() {
   const [seats, setSeats] = useState(null);
@@ -102,7 +92,6 @@ function PageTwo() {
         <Corridor2 />
         <Corridor3 />
         <Corridor4 />
-        {/* <Corridor5/> */}
       </Container>
       <Legend />
     </div>

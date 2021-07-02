@@ -15,7 +15,6 @@ const Seat = styled.span`
 function Audience({ reserved }) {
     const [clicked, setClicked] = useState(false);
 
-
     function yourChoice() {
         setClicked(!clicked)
     }
