@@ -30,7 +30,6 @@ const Container = styled.div`
     grid-auto-columns: 1fr;
     // To na górze to tymczasowe rozwiązanie + uczę się wykorzystywać obszary tabel. Także za czystość kodu tego nie oceniać :D
 `
-// To na górze to tymczasowe rozwiązanie + uczę się wykorzystywać obszary tabel. Także za czystość kodu tego nie oceniać :D
 
 // const Inputt = styled.input`
 //   height: 20px;
