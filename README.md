@@ -31,7 +31,13 @@ You will also see any lint errors in the console.
 This app was created for booking cinema seats.
 
 The `first page` asks the user for the number of places and if they should be next to each other.
+![image](https://user-images.githubusercontent.com/81814080/124275715-3695a280-db43-11eb-920d-2b9e0ed13315.png)
+
 
 On the `second page` there is an outline of the audience where you can choose the place you are interested in.
+![image](https://user-images.githubusercontent.com/81814080/124275889-69d83180-db43-11eb-8224-c79aae67cb86.png)
+
 
 The `third page` is the booking confirmation showing where the reserved seat is.
+![image](https://user-images.githubusercontent.com/81814080/124276028-9724df80-db43-11eb-91d2-05afb91b4487.png)
+
