@@ -2,16 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { useHistory } from "react-router-dom";
 
-const Button = styled.button`
-  display: inline-block;
-  position: absolute;
-  width: 350px;
-  height: 70px;
-  margin-left: 10px;
-`
-
 const LegendBox = styled.div`
-  width: 85%px;
+  width: 85%;
   height: 70px;
   border: 1px solid;
   margin: 0% auto;
@@ -19,14 +11,12 @@ const LegendBox = styled.div`
   min-width: 1290px;
   max-width: 1360px;
 `
-
 const ReservedFalse = styled.div`
     display: inline-block;
     margin: 5px;
     border: 1px solid;
     padding: 30px;
 `
-
 const ReservedTrue = styled.div`
     background-color: rgb(29, 21, 7);
     display: inline-block;
@@ -34,7 +24,6 @@ const ReservedTrue = styled.div`
     border: 1px solid;
     padding: 30px;
 `
-
 const YourChoice = styled.div`
     background-color: rgb(235, 100, 21);
     display: inline-block;
@@ -42,7 +31,6 @@ const YourChoice = styled.div`
     border: 1px solid;
     padding: 30px;
 `
-
 const Text = styled.p`
     text-align: center;
     display: inline-block;
@@ -50,6 +38,13 @@ const Text = styled.p`
     height: 30px;
     transform: translateY(-100%);
     margin-right: 40px;
+`
+const Button = styled.button`
+  display: inline-block;
+  position: absolute;
+  width: 350px;
+  height: 70px;
+  margin-left: 3%;
 `
 
 function Legend() {

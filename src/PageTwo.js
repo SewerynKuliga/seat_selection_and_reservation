@@ -6,12 +6,12 @@ import Legend from './Legend';
 
 const Container = styled.div`
   position: relative;
-  margin: 5% auto;
+  margin: 2% auto;
   margin-bottom: 1%;
   padding-left: 50px;
   padding-right: 50px;
   width: 85%;
-  height: 900px;
+  height: 700px;
   border: 1px solid;
   min-width: 1230px;
   max-width: 1260px;

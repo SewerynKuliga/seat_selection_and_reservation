@@ -7,8 +7,8 @@ const Seat = styled.span`
     position: relative;
     margin: 5px;
     border: 1px solid;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     background-color: ${props => props.reserved ? 'rgb(29, 21, 7)' : 'auto'};
     `
 

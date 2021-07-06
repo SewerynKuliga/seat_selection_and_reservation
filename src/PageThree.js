@@ -18,7 +18,7 @@ function PageThree() {
                 <br /><br />
 
 
-                {/* WIDOK PODGLĄDOWY */}
+                WIDOK PODGLĄDOWY
 
 
             </p>
