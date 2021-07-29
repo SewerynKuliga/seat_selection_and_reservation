@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 import { useState } from "react";
 
 const Seat = styled.span`
-    display: inline-block;
+    display: inline;
     position: relative;
     margin: 5px;
     border: 1px solid;

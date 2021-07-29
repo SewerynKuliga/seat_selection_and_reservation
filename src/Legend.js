@@ -1,15 +1,16 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 import { useHistory } from "react-router-dom";
 
 const LegendBox = styled.div`
+  position: relative;
   width: 85%;
   height: 70px;
   border: 1px solid;
   margin: 0% auto;
   padding: 20px;
-  min-width: 1290px;
-  max-width: 1360px;
+  min-width: 1386px;
+  max-width: 1386px;
 `
 const ReservedFalse = styled.div`
     display: inline-block;

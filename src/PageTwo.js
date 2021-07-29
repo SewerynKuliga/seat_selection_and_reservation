@@ -1,34 +1,24 @@
 import React from 'react';
 import { useEffect, useState } from "react";
-import Audience from './Audience'
-import styled from 'styled-components'
+import Audience from './Audience';
+import styled from 'styled-components';
 import Legend from './Legend';
 
 const Container = styled.div`
   position: relative;
-  margin: 2% auto;
+  margin: 5% auto;
   margin-bottom: 1%;
+
   padding-left: 50px;
   padding-right: 50px;
-  width: 85%;
+
   height: 700px;
-  border: 1px solid;
   min-width: 1230px;
   max-width: 1260px;
+
+  border: 1px solid;
   display: grid;
-  grid-template-areas:
-    "entrance entrance seat52 seat5 seat4 corridor seat32    seat      seat      seat      corridor2 seat91    seat01    seat01    seat01"
-    "entrance entrance seat52 seat5 seat4 corridor seat32    seat      seat      seat      corridor2 seat91    seat01    seat01    seat01"
-    "entrance entrance seat52 seat5 seat4 corridor seat32    seat      seat      seat      corridor2 seat91    seat01    seat01    seat01"
-    "seat1    seat1    seat1  seat5 seat4 corridor seat32    seat      seat      seat      corridor2 seat91    seat01    seat01    seat01"
-    "seat1    seat1    seat1  seat5 seat4 corridor seat32    seat      seat      seat      corridor2 seat91    seat01    seat01    seat01"
-    "seat1    seat1    seat1  seat5 seat4 corridor corridor3 corridor3 corridor3 corridor3 corridor2 corridor4 corridor4 corridor4 corridor4"
-    "seat1    seat1    seat1  seat5 seat4 corridor seat33    seat33    seat33    seat33    corridor2 seat9     seat02    seat02    seat02"
-    "seat1    seat1    seat1  seat5 seat4 corridor seat33    seat33    seat33    seat33    corridor2 seat9     seat02    seat02    seat02"
-    "seat1    seat1    seat1  seat5 seat4 corridor seat33    seat33    seat33    seat33    corridor2 seat9     seat02    seat02    seat02"
-    "seat1    seat1    seat1  seat5 seat4 corridor seat33    seat33    seat33    seat33    corridor2 seat9     seat02    seat02    seat02";
-    grid-auto-columns: 1fr;
-    // To na górze to tymczasowe rozwiązanie + uczę się wykorzystywać obszary tabel. Także za czystość kodu tego nie oceniać :D
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
 `
 
 // const Inputt = styled.input`
@@ -40,21 +30,21 @@ const Container = styled.div`
 //   return result
 // }
 
-const Entrance = styled.div`
-    grid-area: entrance;
-`
-const Corridor1 = styled.div`
-  grid-area: corridor;
-`
-const Corridor2 = styled.div`
-  grid-area: corridor2;
-`
-const Corridor3 = styled.div`
-  grid-area: corridor3;
-`
-const Corridor4 = styled.div`
-  grid-area: corridor4;
-`
+// const Entrance = styled.div`
+//     grid-area: entrance;
+// `
+// const Corridor1 = styled.div`
+//   grid-area: corridor;
+// `
+// const Corridor2 = styled.div`
+//   grid-area: corridor2;
+// `
+// const Corridor3 = styled.div`
+//   grid-area: corridor3;
+// `
+// const Corridor4 = styled.div`
+//   grid-area: corridor4;
+// `
 
 function PageTwo() {
   const [seats, setSeats] = useState(null);
@@ -74,11 +64,6 @@ function PageTwo() {
 
   return (
     <div>
-      {/* <Inputt */}
-      {/* // value={this.props.options} 
-      > */}
-      {/* {this.props.options} */}
-      {/* </Inputt> */}
       <Container>
         {seats && seats.map(seats => <Audience
           id={seats.id}
@@ -86,11 +71,12 @@ function PageTwo() {
           reserved={seats.reserved}
         />
         )}
-        <Entrance />
+
+        {/* <Entrance />
         <Corridor1 />
         <Corridor2 />
         <Corridor3 />
-        <Corridor4 />
+        <Corridor4 /> */}
       </Container>
       <Legend />
     </div>
