@@ -3,11 +3,13 @@ import { useEffect, useState } from "react";
 import Audience from './Audience';
 import styled from 'styled-components';
 import Legend from './Legend';
+import CinemaScreen from './CinemaScreen';
 
 const Container = styled.div`
   position: relative;
-  margin: 5% auto;
+  margin: auto;
   margin-bottom: 1%;
+  margin-top: 2%;
 
   padding-left: 50px;
   padding-right: 50px;
@@ -30,21 +32,6 @@ const Container = styled.div`
 //   return result
 // }
 
-// const Entrance = styled.div`
-//     grid-area: entrance;
-// `
-// const Corridor1 = styled.div`
-//   grid-area: corridor;
-// `
-// const Corridor2 = styled.div`
-//   grid-area: corridor2;
-// `
-// const Corridor3 = styled.div`
-//   grid-area: corridor3;
-// `
-// const Corridor4 = styled.div`
-//   grid-area: corridor4;
-// `
 
 function PageTwo() {
   const [seats, setSeats] = useState(null);
@@ -64,6 +51,7 @@ function PageTwo() {
 
   return (
     <div>
+      <CinemaScreen />
       <Container>
         {seats && seats.map(seats => <Audience
           id={seats.id}
@@ -71,12 +59,7 @@ function PageTwo() {
           reserved={seats.reserved}
         />
         )}
-
-        {/* <Entrance />
-        <Corridor1 />
-        <Corridor2 />
-        <Corridor3 />
-        <Corridor4 /> */}
+        
       </Container>
       <Legend />
     </div>

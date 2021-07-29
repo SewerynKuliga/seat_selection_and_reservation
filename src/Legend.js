@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useHistory } from "react-router-dom";
+import Button from '@material-ui/core/Button';
+import "./Legend.css"
 
 const LegendBox = styled.div`
   position: relative;
@@ -26,7 +28,7 @@ const ReservedTrue = styled.div`
     padding: 30px;
 `
 const YourChoice = styled.div`
-    background-color: rgb(235, 100, 21);
+    background-color: rgb(3, 199, 3);
     display: inline-block;
     margin: 5px;
     border: 1px solid;
@@ -40,13 +42,7 @@ const Text = styled.p`
     transform: translateY(-100%);
     margin-right: 40px;
 `
-const Button = styled.button`
-  display: inline-block;
-  position: absolute;
-  width: 350px;
-  height: 70px;
-  margin-left: 3%;
-`
+
 
 function Legend() {
     let history = useHistory();
@@ -60,7 +56,14 @@ function Legend() {
             <ReservedFalse></ReservedFalse> <Text>Miejsca dostępne</Text>
             <ReservedTrue></ReservedTrue> <Text>Miejsca zarezerwowane</Text>
             <YourChoice></YourChoice> <Text>Twój wybór</Text>
-            <Button onClick={handleClick}>Rezerwuj</Button>
+            <Button
+                className="button"
+                onClick={handleClick}
+                variant="contained"
+                color="primary"
+            >
+                Rezerwuj
+            </Button>
         </LegendBox>
     )
 }
