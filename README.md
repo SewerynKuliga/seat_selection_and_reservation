@@ -3,7 +3,7 @@ Application in production...
 
 This project was created with the [Create React App](https://github.com/facebook/create-react-app), application using the [Redux](https://redux.js.org/) template. </br>
 The application built on `functions` and using `hooks`. </br>
-`Material UI` was used for a better visual effect
+`Material UI` was used for a better visual effect.
 
 ## Necessary Scripts
 
