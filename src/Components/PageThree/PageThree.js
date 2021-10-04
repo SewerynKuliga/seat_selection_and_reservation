@@ -1,5 +1,7 @@
-import React from 'react';
-import styled from 'styled-components'
+import React, { useContext } from 'react';
+import styled from 'styled-components';
+import { ReservationContext } from '../../Contexts/ReservationContext';
+
 
 function PageThree() {
     return (
@@ -8,7 +10,7 @@ function PageThree() {
             <br />
             <h3>Wybrałeś miejsca:</h3>
             <div>
-                
+
             </div>
             <br />
             <h3>Dziękujemy! W razie problemów prosimy o kontakt z działem administracji.</h3>

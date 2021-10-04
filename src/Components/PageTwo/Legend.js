@@ -13,9 +13,9 @@ function Legend() {
 
     return (
         <LegendBox>
-            <ReservedFalse></ReservedFalse> <Text>Miejsca dostępne</Text>
-            <ReservedTrue></ReservedTrue> <Text>Miejsca zarezerwowane</Text>
-            <YourChoice></YourChoice> <Text>Twój wybór</Text>
+            <ReservedFalse /> <Text>Miejsca dostępne</Text>
+            <ReservedTrue /> <Text>Miejsca zarezerwowane</Text>
+            <YourChoice /> <Text>Twój wybór</Text>
             <Button
                 className="button"
                 onClick={handleClick}

@@ -5,28 +5,14 @@ import styled from 'styled-components';
 import Legend from './Legend';
 import CinemaScreen from './CinemaScreen';
 
-
-
-// const Inputt = styled.input`
-//   height: 20px;
-//   display:;
-// `
-
-// function parseResponse(result) {
-//   return result
-// }
-
-
 function PageTwo() {
-  const [seats, setSeats] = useState(null);
+  const [seats, setSeats] = useState([]);
 
-  const fetchSeats = () => {
-    return fetch('http://localhost:3001/seats')
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setSeats(data)
-      })
+  const fetchSeats = async () => {
+    const response = await fetch('http://localhost:3001/seats');
+    const data = await response.json();
+    console.log(data);
+    setSeats(data);
   }
 
   useEffect(() => {
@@ -43,11 +29,8 @@ function PageTwo() {
           reserved={seats.reserved}
         />
         )}
-        
       </Container>
       <Legend />
-
-      
     </div>
   )
 }

@@ -8,7 +8,7 @@ import { ReservationContext } from './Contexts/ReservationContext'
 
 function App() {
   const [options, setOptions] = useState(1);
-  const [checked, setChecked] = React.useState(false);
+  const [checked, setChecked] = useState(false);
 
   return (
     <Router>

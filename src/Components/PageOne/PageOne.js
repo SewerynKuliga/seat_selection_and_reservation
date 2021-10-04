@@ -1,7 +1,7 @@
 import SeatsNumber from './SeatsNumber';
 import styled from 'styled-components';
 import { useHistory } from "react-router-dom";
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import Checkbox from '@material-ui/core/Checkbox';
 import { ReservationContext } from '../../Contexts/ReservationContext';
 
