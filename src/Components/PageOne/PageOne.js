@@ -1,14 +1,14 @@
-import React from 'react';
-import './App.css';
 import SeatsNumber from './SeatsNumber';
 import styled from 'styled-components';
 import { useHistory } from "react-router-dom";
-import { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Checkbox from '@material-ui/core/Checkbox';
+import { ReservationContext } from '../../Contexts/ReservationContext';
 
 function PageOne() {
-  const [options, setOptions] = useState(1);
-  const [checked, setChecked] = React.useState(false);
+
+  const { options, setOptions, checked, setChecked } = useContext(ReservationContext)
+
   let history = useHistory();
 
   const handleChange = (event) => {

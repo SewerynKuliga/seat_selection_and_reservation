@@ -1,27 +1,15 @@
 import React from 'react';
 import styled from 'styled-components'
 
-const Message = styled.div`
-    margin: 10% 10% 10% 20%;
-`
-
 function PageThree() {
     return (
         <Message>
             <h1>Twoja rezerwacja przebiegła pomyślnie!</h1>
             <br />
             <h3>Wybrałeś miejsca:</h3>
-            <p>
-                <br />- rząd x1, miejsce y1 (id1)
-                <br />- rząd x2, miejsce y2 (id2)
-                <br />- rząd x3, miejsce y3 (id3)
-                <br /><br />
-
-
-                WIDOK PODGLĄDOWY
-
-
-            </p>
+            <div>
+                
+            </div>
             <br />
             <h3>Dziękujemy! W razie problemów prosimy o kontakt z działem administracji.</h3>
         </Message>
@@ -29,3 +17,7 @@ function PageThree() {
 }
 
 export default PageThree;
+
+const Message = styled.div`
+    margin: 10% 10% 10% 20%;
+`

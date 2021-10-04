@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import styled from 'styled-components';
 
 function SeatsNumber({ options, setOptions }) {
@@ -28,9 +27,10 @@ function SeatsNumber({ options, setOptions }) {
 export default SeatsNumber;
 
 const SeatsNumbers = styled.select`
-  display: inline-block;
+  display: block;
   height: 20px;
   width: 150px;
   float: right;
   margin-top: 15px;
+  transform: translateY(3px);
 `
