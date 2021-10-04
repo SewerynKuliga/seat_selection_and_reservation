@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useContext } from "react";
 import Audience from './Audience';
 import styled from 'styled-components';
 import Legend from './Legend';
@@ -11,7 +11,9 @@ import '../../App.css';
 function PageTwo() {
 
 
-  const { seats, setSeats } = useContext(ReservationContext)
+  const { seats, setSeats } = useContext(ReservationContext);
+  const { chosenSeats, setChosenSeats } = useContext(ReservationContext);
+
 
   const fetchSeats = async () => {
     const response = await fetch('http://localhost:3001/seats');
@@ -32,6 +34,7 @@ function PageTwo() {
           id={seats.id}
           key={seats.id}
           reserved={seats.reserved}
+          picked={seats.picked}
         />
         )}
       </Container>

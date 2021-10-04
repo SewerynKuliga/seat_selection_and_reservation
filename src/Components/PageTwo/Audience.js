@@ -1,19 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { ReservationContext } from '../../Contexts/ReservationContext';
 
-function Audience({ reserved }) {
-    const [clicked, setClicked] = useState(false);
 
-    function yourChoice() {
-        setClicked(!clicked)
-    }
+function Audience({ reserved, picked }) {
+
 
     return (
         <Seat
             reserved={reserved}
-            onClick={yourChoice}
-            className={clicked ? "picked" : "auto"}
+            className={picked ? "picked" : "auto"}
         >
         </Seat>
     )

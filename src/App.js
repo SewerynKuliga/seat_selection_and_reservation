@@ -10,12 +10,11 @@ function App() {
   const [options, setOptions] = useState(1);
   const [checked, setChecked] = useState(false);
   const [seats, setSeats] = useState([]);
-  const [chosen, setChosen] = useState(false)
 
   return (
     <Router>
       <Switch>
-        <ReservationContext.Provider value={{ options, setOptions, checked, setChecked, seats, setSeats, chosen, setChosen }}>
+        <ReservationContext.Provider value={{ options, setOptions, checked, setChecked, seats, setSeats }}>
           <Route exact path='/' component={PageOne} />
           <Route exact path='/seats' component={PageTwo} />
           <Route exact path='/confirm' component={PageThree} />
