@@ -2,13 +2,6 @@ import React from 'react';
 import './App.css';
 import styled from 'styled-components';
 
-const SeatsNumbers = styled.select`
-  display: inline-block;
-  height: 20px;
-  width: 150px;
-  float: right;
-  margin-top: 15px;
-`
 function SeatsNumber({ options, setOptions }) {
 
   const optionsChoice = [
@@ -33,3 +26,11 @@ function SeatsNumber({ options, setOptions }) {
 }
 
 export default SeatsNumber;
+
+const SeatsNumbers = styled.select`
+  display: inline-block;
+  height: 20px;
+  width: 150px;
+  float: right;
+  margin-top: 15px;
+`

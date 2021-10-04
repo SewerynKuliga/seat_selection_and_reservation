@@ -6,30 +6,6 @@ import { useHistory } from "react-router-dom";
 import { useState } from 'react';
 import Checkbox from '@material-ui/core/Checkbox';
 
-const Container = styled.div`
-  position: relative;
-  width: 280px;
-  height: 225px;
-  margin: 10% auto;
-`
-const Text = styled.p`
-  display: inline-block;
-`
-const SeatsTogether = styled.label`
-  display: block;
-  margin: 20px auto;
-  text-align: center;
-`
-const ChooseSeats = styled.div`
-  position: relative;
-  width: 280px;
-  height: 50px;
-  border: 1px solid;
-  margin-top: 50px;
-  text-align: center;
-  padding-top: 25px;
-`
-
 function PageOne() {
   const [options, setOptions] = useState(1);
   const [checked, setChecked] = React.useState(false);
@@ -62,3 +38,26 @@ function PageOne() {
 
 export default PageOne;
 
+const Container = styled.div`
+  position: relative;
+  width: 280px;
+  height: 225px;
+  margin: 10% auto;
+`
+const Text = styled.p`
+  display: inline-block;
+`
+const SeatsTogether = styled.label`
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+`
+const ChooseSeats = styled.div`
+  position: relative;
+  width: 280px;
+  height: 50px;
+  border: 1px solid;
+  margin-top: 50px;
+  text-align: center;
+  padding-top: 25px;
+`

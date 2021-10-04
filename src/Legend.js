@@ -4,6 +4,32 @@ import { useHistory } from "react-router-dom";
 import Button from '@material-ui/core/Button';
 import "./Legend.css"
 
+function Legend() {
+    let history = useHistory();
+
+    function handleClick() {
+        history.push("/confirm");
+    }
+
+    return (
+        <LegendBox>
+            <ReservedFalse></ReservedFalse> <Text>Miejsca dostępne</Text>
+            <ReservedTrue></ReservedTrue> <Text>Miejsca zarezerwowane</Text>
+            <YourChoice></YourChoice> <Text>Twój wybór</Text>
+            <Button
+                className="button"
+                onClick={handleClick}
+                variant="contained"
+                color="primary"
+            >
+                Rezerwuj
+            </Button>
+        </LegendBox>
+    )
+}
+
+export default Legend;
+
 const LegendBox = styled.div`
   position: relative;
   width: 85%;
@@ -42,30 +68,3 @@ const Text = styled.p`
     transform: translateY(-100%);
     margin-right: 40px;
 `
-
-
-function Legend() {
-    let history = useHistory();
-
-    function handleClick() {
-        history.push("/confirm");
-    }
-
-    return (
-        <LegendBox>
-            <ReservedFalse></ReservedFalse> <Text>Miejsca dostępne</Text>
-            <ReservedTrue></ReservedTrue> <Text>Miejsca zarezerwowane</Text>
-            <YourChoice></YourChoice> <Text>Twój wybór</Text>
-            <Button
-                className="button"
-                onClick={handleClick}
-                variant="contained"
-                color="primary"
-            >
-                Rezerwuj
-            </Button>
-        </LegendBox>
-    )
-}
-
-export default Legend;

@@ -3,18 +3,18 @@
     {
       "id": "s11",
       "cords": {
-      "x": 1,
-      "y": 1
+        "x": 1,
+        "y": 1
       },
       "reserved": false
     },
     {
       "id": "s12",
       "cords": {
-      "x": 1,
-      "y": 2
-    },
-    "reserved": false
+        "x": 1,
+        "y": 2
+      },
+      "reserved": false
     },
     {
       "id": "s13",
@@ -38,7 +38,7 @@
         "x": 1,
         "y": 5
       },
-      "reserved": false
+      "reserved": true
     },
     {
       "id": "s16",
@@ -120,10 +120,6 @@
       },
       "reserved": false
     },
-
-
-
-
     {
       "id": "s21",
       "cords": {
@@ -244,10 +240,6 @@
       },
       "reserved": false
     },
-
-
-
-
     {
       "id": "s31",
       "cords": {
@@ -310,7 +302,7 @@
         "x": 3,
         "y": 8
       },
-      "reserved": false
+      "reserved": true
     },
     {
       "id": "s39",
@@ -318,7 +310,7 @@
         "x": 3,
         "y": 9
       },
-      "reserved": false
+      "reserved": true
     },
     {
       "id": "s310",
@@ -368,15 +360,6 @@
       },
       "reserved": false
     },
-
-
-
-
-
-
-
-
-
     {
       "id": "s41",
       "cords": {
@@ -497,13 +480,6 @@
       },
       "reserved": false
     },
-
-
-
-
-
-    
-    
     {
       "id": "s51",
       "cords": {
@@ -624,13 +600,6 @@
       },
       "reserved": false
     },
-
-
-
-
-
-
-    
     {
       "id": "s61",
       "cords": {
@@ -751,12 +720,6 @@
       },
       "reserved": false
     },
-
-
-
-
-
-   
     {
       "id": "s71",
       "cords": {
@@ -779,7 +742,7 @@
         "x": 7,
         "y": 3
       },
-      "reserved": false
+      "reserved": true
     },
     {
       "id": "s74",
@@ -787,7 +750,7 @@
         "x": 7,
         "y": 4
       },
-      "reserved": false
+      "reserved": true
     },
     {
       "id": "s75",
@@ -877,13 +840,6 @@
       },
       "reserved": false
     },
-
-
-
-
-
-
-    
     {
       "id": "s81",
       "cords": {
@@ -1004,13 +960,6 @@
       },
       "reserved": false
     },
-
-
-
-
-
-
-    
     {
       "id": "s91",
       "cords": {
@@ -1121,7 +1070,7 @@
         "x": 9,
         "y": 14
       },
-      "reserved": false
+      "reserved": true
     },
     {
       "id": "s915",
@@ -1129,7 +1078,7 @@
         "x": 9,
         "y": 15
       },
-      "reserved": false
+      "reserved": true
     }
   ]
 }
