@@ -8,7 +8,7 @@ function Audience({ reserved }) {
     function yourChoice() {
         setClicked(!clicked)
     }
-    
+
     return (
         <Seat
             reserved={reserved}
