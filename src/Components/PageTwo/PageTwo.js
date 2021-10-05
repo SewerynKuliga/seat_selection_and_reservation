@@ -12,7 +12,7 @@ function PageTwo() {
 
 
   const { seats, setSeats } = useContext(ReservationContext);
-  const { chosenSeats, setChosenSeats } = useContext(ReservationContext);
+
 
 
   const fetchSeats = async () => {
@@ -34,11 +34,24 @@ function PageTwo() {
           id={seats.id}
           key={seats.id}
           reserved={seats.reserved}
-          picked={seats.picked}
         />
         )}
       </Container>
       <Legend />
+
+      <Message>
+            <h1>Twoja rezerwacja przebiegła pomyślnie!</h1>
+            <br />
+            <h3>Wybrałeś miejsca:</h3>
+            {/* tablica.sort() - sortuje elementy */}
+            <div>
+                {/* {chosenSeats.map((seat) => {
+                    return <ChosenSeats />
+                })} */}
+            </div>
+            <br />
+            <h3>Dziękujemy! W razie problemów prosimy o kontakt z działem administracji.</h3>
+        </Message>
     </div>
   )
 }
@@ -61,4 +74,8 @@ const Container = styled.div`
   border: 1px solid;
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+`
+
+const Message = styled.div`
+    margin: 10% 10% 10% 20%;
 `

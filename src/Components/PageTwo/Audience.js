@@ -1,16 +1,36 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { ReservationContext } from '../../Contexts/ReservationContext';
 
 
-function Audience({ reserved, picked }) {
+function Audience({ reserved }) {
+    const { seats, setSeats } = useContext(ReservationContext);
+    const [chosen, setChosenSeats] = useState([])
+    const [pickedPlace, setPickedPlace] = useState(false)
+
+    const handleChange = (e) => {
+        setPickedPlace(!pickedPlace);
+        setChosenSeats({ 'id': e.target.value })
+    }
+
+    // const handleChange1 = (e) => {
+    //     setChosenSeats(e.target.props.id)
+    // }
+
+    // const chosen = seats.slice(reserved)
+
+    useEffect(() => {
+        setPickedPlace(pickedPlace)
+    }, [pickedPlace]);
 
 
     return (
         <Seat
             reserved={reserved}
-            className={picked ? "picked" : "auto"}
+            className={pickedPlace ? "picked" : "auto"}
+            onClick={handleChange}
+        // onChange={handleChange1}
         >
         </Seat>
     )

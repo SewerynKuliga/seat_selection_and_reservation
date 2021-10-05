@@ -1,11 +1,11 @@
 import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
-import ChosenSeats from './ChosenSeats';
-import { ReservationContext } from '../../Contexts/ReservationContext';
+// import ChosenSeats from './ChosenSeats';
+// import { ReservationContext } from '../../Contexts/ReservationContext';
 
 
 function PageThree() {
-    const {chosenSeats, setChosenSeats} = useContext(ReservationContext)
+
 
     return (
         <Message>
@@ -13,9 +13,9 @@ function PageThree() {
             <br />
             <h3>Wybrałeś miejsca:</h3>
             <div>
-                {chosenSeats.map((seat) => {
+                {/* {chosenSeats.map((seat) => {
                     return <ChosenSeats />
-                })}
+                })} */}
             </div>
             <br />
             <h3>Dziękujemy! W razie problemów prosimy o kontakt z działem administracji.</h3>
