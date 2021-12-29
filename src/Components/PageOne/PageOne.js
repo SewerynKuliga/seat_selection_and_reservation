@@ -11,10 +11,6 @@ function PageOne() {
 
   let history = useHistory();
 
-  const handleChange = (event) => {
-    setChecked(event.target.checked);
-  };
-
   function handleClick() {
     history.push('/seats');
   }
@@ -22,12 +18,12 @@ function PageOne() {
   return (
     <Container>
       <Text>Liczba miejsc:</Text>
-      <SeatsNumber options={options} setOptions={setOptions} /> <br />
+      <SeatsNumber options={options} setOptions={setOptions} /> 
       <SeatsTogether>
         <Checkbox
           checked={checked}
           color="primary"
-          onChange={handleChange}
+          onChange={(e) => setChecked(e.target.checked)}
           inputProps={{ 'aria-label': 'secondary checkbox' }}
         /> Czy miejsca mają być obok siebie?
       </SeatsTogether>
