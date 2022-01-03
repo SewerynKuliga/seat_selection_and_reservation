@@ -12,9 +12,9 @@ function PageThree() {
       <h3>Wybrałeś miejsca:</h3>
       <div>
         {
-          chosenSeats.map((seat) => {
+          chosenSeats.map((seat, index) => {
             return (
-              <p>
+              <p key={index}>
                 Rząd: {seat.cords.x}, miejsce: {seat.cords.y}
               </p>
             );
