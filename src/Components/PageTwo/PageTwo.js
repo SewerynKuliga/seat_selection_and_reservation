@@ -11,7 +11,6 @@ function PageTwo() {
   const fetchSeats = async () => {
     const response = await fetch("http://localhost:3001/seats");
     const data = await response.json();
-    console.log(data);
     setAllSeats(data);
   };
 
@@ -42,16 +41,17 @@ export default PageTwo;
 
 const Container = styled.div`
   position: relative;
-  margin: auto;
+  margin: 0 auto;
   margin-bottom: 1%;
   margin-top: 2%;
 
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
 
   height: 700px;
-  min-width: 1230px;
+  width: 90%;
   max-width: 1260px;
+  min-width: 786px;
 
   border: 1px solid;
   display: grid;

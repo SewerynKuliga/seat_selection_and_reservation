@@ -32,12 +32,12 @@ export default Legend;
 
 const LegendBox = styled.div`
   position: relative;
-  width: 85%;
-  height: 70px;
+  width: 50%;
+  height: auto;
   border: 1px solid;
   margin: 0% auto;
   padding: 20px;
-  min-width: 1386px;
+  min-width: 700px;
   max-width: 1386px;
 `
 const ReservedFalse = styled.div`
